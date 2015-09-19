@@ -1,7 +1,7 @@
 FROM debian:latest
 MAINTAINER liubo
 
-###1.update the system
+# 1.update the system and install some tools needed
 RUN rm -rf /etc/apt/sources.list
 ADD ./sources.list /etc/apt/sources.list
 
@@ -34,6 +34,8 @@ RUN gem sources -a https://ruby.taobao.org/
 RUN gem install sass
 RUN gem install compass
 
+# Install purcell emacs.d
+RUN git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
 
 
 RUN mkdir /benwork

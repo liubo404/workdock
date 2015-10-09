@@ -23,14 +23,14 @@ RUN apt-get install -y ruby
 RUN apt-get install -y ruby-dev
 RUN apt-get install -y subversion
 RUN apt-get install -y libapache2-svn
-#RUN apt-get install -y 
+RUN apt-get install -y apt-utils
 
 
 
 
 # Install nodejs
-RUN  curl -sL https://deb.nodesource.com/setup_4.x | bash -
-RUN apt-get install -y nodejs
+#RUN  curl -sL https://deb.nodesource.com/setup_4.x | bash -
+#RUN apt-get install -y nodejs
 
 
 # Change ruby gem sources & install sass compass
@@ -43,8 +43,8 @@ RUN gem install compass
 RUN git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
 
 #install lein
-RUN wget -O ~/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-RUN chmod a+x ~/bin/lein
+RUN wget -O /bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+RUN chmod a+x /bin/lein
 
 RUN mkdir /benwork
 

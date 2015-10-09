@@ -1,6 +1,9 @@
 FROM debian:latest
 MAINTAINER liubo
 
+###0.add apt-cacher proxy
+RUN  echo 'Acquire::http { Proxy "http://192.168.1.200:3142"; };' >> /etc/apt/apt.conf.d/01proxy
+
 ###1.update the system
 RUN rm -rf /etc/apt/sources.list
 ADD ./sources.list /etc/apt/sources.list
@@ -35,6 +38,9 @@ RUN gem install sass
 RUN gem install compass
 
 
+#install lein
+RUN wget -O ~/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+RUN chmod a+x ~/bin/lein
 
 RUN mkdir /benwork
 

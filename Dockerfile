@@ -24,8 +24,7 @@ RUN apt-get install -y ruby-dev
 RUN apt-get install -y subversion
 RUN apt-get install -y libapache2-svn
 RUN apt-get install -y apt-utils
-
-
+RUN apt-get install -y dtrx
 
 
 # Install nodejs

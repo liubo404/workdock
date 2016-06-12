@@ -39,7 +39,10 @@ RUN gem install sass
 RUN gem install compass
 
 # Install purcell emacs.d
-RUN git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+#RUN git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+
+# Install spacemacs
+RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 #install lein
 RUN wget -O /bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein

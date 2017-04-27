@@ -12,3 +12,14 @@ apt-get install -y pcre pcre-devel
 apt-get install -y zlib zlib-devel
 apt-get install -y openssl openssl-devel
 
+
+#get source code
+wget https://nginx.org/download/nginx-1.13.0.tar.gz
+tar -xzvf nginx-1.13.0.tar.gz
+
+
+#build & install
+cd nginx/src
+./configure
+make 
+make install

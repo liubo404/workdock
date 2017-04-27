@@ -1,0 +1,8 @@
+#uname -a
+
+apt-get install -y gcc
+apt-get install -y gcc-c++
+apt-get install -y pcre pcre-devel
+apt-get install -y zlib zlib-devel
+apt-get install -y openssl openssl-devel
+

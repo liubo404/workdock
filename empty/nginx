@@ -1,5 +1,11 @@
 #uname -a
 
+#mkdir -p nginx/src
+#mkdir -p nginx/obj
+#mkdir -p nginx/deploy
+#mkdir -p nginx/log
+
+
 apt-get install -y gcc
 apt-get install -y gcc-c++
 apt-get install -y pcre pcre-devel
